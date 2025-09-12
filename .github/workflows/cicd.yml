@@ -76,7 +76,7 @@ jobs:
       ## (8) Docker Image Push (DockerHub에 올리기)
       - name: Push Docker Image
         run: |
-          echo '${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{ env.DOCKER_IMAGE_TAG }}'
+          echo 'show me'
           docker image push 109kms/${{ env.DOCKER_IMAGE_NAME }}:${{ env.DOCKER_IMAGE_TAG }}
   ## 2. deploy (CD)
   deploy:
