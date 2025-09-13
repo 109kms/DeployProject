@@ -102,13 +102,13 @@ jobs:
               newgrp docker
             fi
             # 2. 기존 컨테이너 및 자원 정리
-            docker stop app-container
-            docker rm app-container
-            docker system prune -f
+            sudo docker stop app-container
+            sudo docker rm app-container
+            sudo docker system prune -f
             # 3. 업로드 디렉터리 생성
             mkdir /home/ubuntu/upload
             # 4. 컨테이너 실행
-            docker run -d \
+            sudo docker run -d \
               --name app-container \
               -p 8080:8080 \
               -v /home/ubuntu/upload:/myapp/upload \
