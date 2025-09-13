@@ -19,7 +19,7 @@ RUN mvn clean package -DskipTests
 FROM tomcat:9.0-jdk11
 
 # 첫 번째 스테이지의 war 파일을 현재 스테이지로 복사하는 COPY
-COPY --from=build /myapp/target/*.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=build /myapp/target/*.war /usr/local/tomcat/webapps/deploy.war
 
 # 첫 번째 스테이지를 제거하고, Github runner의 war 파일을 복사하는 경우에 사용하는 COPY
 # Github runner의 파일을 COPY 하는 경우 Github runner의 작업 디렉터리를 기준으로 실행
