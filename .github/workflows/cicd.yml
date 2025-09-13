@@ -70,7 +70,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-      ## (7) Docker Image Build (★ Dockerfile 실행 포인트)
+      ## (7) Docker Image Build (★ Dockerfile 실행 포인트 )
       - name: Build Docker Image
         run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{ env.DOCKER_IMAGE_TAG }} .
       ## (8) Docker Image Push (DockerHub에 올리기)
