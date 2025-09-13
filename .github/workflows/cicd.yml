@@ -82,7 +82,7 @@ jobs:
     needs: build
     ## 2) runs-on : 실행 환경 설정 (job을 실행할 OS)
     runs-on: ubuntu-latest
-    ## 3) steps : job을 구성하는 하위 동작
+    ## 3) steps : job을 구성하는 하위 동작 
     steps:
       ## EC2 배포
       - name: Deploy to EC2
